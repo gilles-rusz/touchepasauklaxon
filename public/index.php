@@ -7,7 +7,7 @@ require_once __DIR__ . '/../vendor/Bramus/Router/Router.php';
 require_once __DIR__ . '/../app/Controllers/TrajetController.php';
 require_once __DIR__ . '/../app/Controllers/AuthController.php';
 require_once __DIR__ . '/../app/Controllers/AdminController.php';
-require_once __DIR__ . '/../app/Models/Employe.php';
+require_once __DIR__ . '/../app/Model/Employe.php';
 
 use Bramus\Router\Router;
 

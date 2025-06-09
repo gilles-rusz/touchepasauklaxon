@@ -1,8 +1,8 @@
 <?php
 
-use App\Models\Employe;
-use App\Models\Trajet;
-use App\Models\Agence;
+use App\Model\Employe;
+use App\Model\Trajet;
+use App\Model\Agence;
 
 class AdminController
 {
@@ -31,7 +31,7 @@ class AdminController
         require_once __DIR__ . '/../Views/admin/dashboard.php';
     }
 
-    // Liste des agences (utile si tu veux une page à part)
+    // Liste des agences 
     public function agencesIndex()
     {
         $this->checkAdmin();

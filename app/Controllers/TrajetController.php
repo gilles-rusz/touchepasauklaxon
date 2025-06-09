@@ -1,6 +1,7 @@
 <?php
+namespace App\Controllers;
 
-use App\Models\Trajet;
+use App\Model\Trajet;
 
 class TrajetController
 {

@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Core;
 
 use PDO;
+use PDOException;
 
 class Database
 {
@@ -11,20 +11,22 @@ class Database
 
     private function __construct()
     {
-        $this->connection = new PDO(
-            'mysql:host=127.0.0.1;port=3306;dbname=touchepasauklaxon;charset=utf8mb4',
-            'root',
-            '',
-            [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            ]
-        );
+        try {
+            $this->connection = new PDO(
+                'mysql:host=127.0.0.1;dbname=touchepasauklaxon;charset=utf8mb4',
+                'root',
+                '' 
+            );
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die("Erreur de connexion à la base de données : " . $e->getMessage());
+        }
     }
 
     public static function getInstance(): Database
     {
         if (self::$instance === null) {
-            self::$instance = new Database();
+            self::$instance = new self();
         }
         return self::$instance;
     }

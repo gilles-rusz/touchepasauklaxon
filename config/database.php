@@ -1,5 +1,11 @@
 <?php
 
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'touchepasauklaxon');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+
+
 class Database
 {
     private static ?Database $instance = null;
@@ -8,7 +14,7 @@ class Database
     private function __construct()
     {
         $this->connection = new PDO(
-            'mysql:host=localhost;dbname=touchepasauklaxon;charset=utf8mb4',
+           'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4',
             'root',
             ''
         );
