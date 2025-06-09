@@ -38,7 +38,7 @@ config/
 routes/
 public/
 tests/
-vendor/ (optionnel)
+vendor/
 ```
 
 ---
@@ -83,5 +83,5 @@ vendor/ (optionnel)
 
 ## 👤 Auteur
 
-- Prénom NOM
-- Étudiant.e en [Nom de la formation]
+- gilles ruszczycki
+- Étudiant.e en developpement web
