@@ -6,7 +6,7 @@ use App\Models\Employe;
 
 class AuthController {
     public function loginForm() {
-        include __DIR__ . '/../Views/login.php';
+        include __DIR__ . '/../Views/auth/login.php';
     }
 
     public function login() {
